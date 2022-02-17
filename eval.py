@@ -70,7 +70,7 @@ def main(args):
     dataset = load_dataset("csv", data_files={args.split: args.path}, delimiter="\t")[args.split]
 
     # for testing: only process the first two examples as a test
-    dataset = dataset.select(range(5))
+    # dataset = dataset.select(range(5))
 
     # load processor
     feature_extractor = AutoFeatureExtractor.from_pretrained(args.model_id)
